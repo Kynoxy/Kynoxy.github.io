@@ -1,3 +1,11 @@
+/* Resetando algumas configurações do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte padrão e o estilo do body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,11 +16,13 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
+/* Animação de fade-in */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Estilo do cabeçalho */
 header {
     background-color: #1c1c1c;
     color: white;
@@ -22,11 +32,13 @@ header {
     animation: slideDown 1s ease-out;
 }
 
+/* Animação do slideDown no cabeçalho */
 @keyframes slideDown {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
+/* Estilo do container do perfil */
 .profile-container {
     display: flex;
     align-items: center;
@@ -34,6 +46,7 @@ header {
     gap: 20px;
 }
 
+/* Estilo da foto de perfil */
 .profile-picture {
     width: 130px;
     height: 130px;
@@ -43,11 +56,13 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Efeito de hover na foto de perfil */
 .profile-picture:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px #bb86fc;
 }
 
+/* Estilo do container principal */
 .container {
     width: 90%;
     max-width: 750px;
@@ -59,6 +74,7 @@ header {
     animation: fadeIn 1s ease-in;
 }
 
+/* Estilo dos títulos das seções */
 h2 {
     color: #bb86fc;
     border-bottom: 2px solid #bb86fc;
@@ -68,11 +84,13 @@ h2 {
     animation: slideLeft 0.8s ease-out;
 }
 
+/* Animação do slideLeft nos títulos */
 @keyframes slideLeft {
     from { transform: translateX(-30px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
 
+/* Estilo das listas */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -87,11 +105,13 @@ ul li {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Efeito de hover nas listas */
 ul li:hover {
     transform: scale(1.05);
     background: #373737;
 }
 
+/* Estilo das linguagens */
 .linguagens {
     display: flex;
     flex-wrap: wrap;
@@ -104,14 +124,18 @@ ul li:hover {
     border-radius: 5px;
     font-size: 0.9em;
     color: #bbb;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Efeito de hover nas linguagens */
 .linguagens span:hover {
     background: #bb86fc;
     color: #121212;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #bb86fc;
 }
 
+/* Estilo dos links */
 a {
     color: #bb86fc;
     text-decoration: none;
@@ -119,24 +143,35 @@ a {
     transition: color 0.3s ease-in-out;
 }
 
+/* Efeito de hover nos links */
 a:hover {
-    text-decoration: underline;
     color: #985eff;
+    text-decoration: underline;
 }
 
+/* Estilo dos parágrafos */
 p {
     margin-bottom: 15px;
 }
 
+/* Estilo das palavras em negrito nos parágrafos */
 p strong {
     color: #f4b400;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.8em;
     }
     .container {
         padding: 20px;
+    }
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+    .linguagens span {
+        font-size: 0.8em;
     }
 }
