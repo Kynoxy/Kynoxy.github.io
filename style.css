@@ -175,3 +175,23 @@ p strong {
         font-size: 0.8em;
     }
 }
+
+/* Estilo dos links de download */
+ul li a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #03dac5;
+    background: #2a2a2a;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s ease;
+}
+
+ul li a:hover {
+    background: #03dac5;
+    color: #121212;
+    text-decoration: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #03dac5;
+}
