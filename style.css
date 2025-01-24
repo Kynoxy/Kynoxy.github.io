@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-picture {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #bb86fc;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #bb86fc;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 30px auto;
+    background: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in;
+}
+
+h2 {
+    color: #bb86fc;
+    border-bottom: 2px solid #bb86fc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    animation: slideLeft 0.8s ease-out;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    background: #373737;
+}
+
+.linguagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.linguagens span {
+    background: #373737;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #bbb;
+    transition: background 0.3s ease;
+}
+
+.linguagens span:hover {
+    background: #bb86fc;
+    color: #121212;
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #985eff;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+p strong {
+    color: #f4b400;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    .container {
+        padding: 20px;
+    }
+}
